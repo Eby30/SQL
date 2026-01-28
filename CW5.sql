@@ -1,0 +1,10 @@
+INSERT INTO `Mobiles`(`ID`, `Brand`, `Model`, `Price`, `Stock`) VALUES ('1','Samsung','M14','12000','30');
+INSERT INTO `Mobiles`( `Brand`, `Model`, `Price`, `Stock`) VALUES ('Redmi','Note 12','15000','25');
+INSERT INTO `Mobiles`(`Brand`, `Model`, `Price`, `Stock`) VALUES ('Realme','Narzo 50','13000','20'),('Samsung','Galaxy A23','18000','10');
+SELECT * FROM `Mobiles` WHERE Price>13000 OR Stock<15;
+UPDATE `Mobiles` SET Stock=Stock+5, Price=12500 WHERE Model='Narzo 50';
+DELETE FROM `Mobiles` WHERE ID='2';
+SELECT MIN(Price) FROM Mobiles;
+SELECT MAX(Price)AS LargestPrice FROM Mobiles;
+SELECT SUM(Stock) FROM `Mobiles`;
+SELECT * FROM `Mobiles` ORDER BY Price DESC LIMIT 2;
